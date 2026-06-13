@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-oatmeal: #F5F2EB;
+  --color-oatmeal-dark: #E5DFC9;
+  --color-oatmeal-light: #FAF8F4;
+  --color-navy: #1E293B;
+  --color-navy-light: #2D3748;
+  --color-navy-dark: #0F172A;
+  --color-cream: #FAF8F5;
+  --color-dust: #8A9A86;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom styles for the portfolio */
+html, body {
+  background-color: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Page routing transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Canvas cleaning styles */
+.cleaning-canvas {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%231E293B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 22 4-4'%3E%3C/path%3E%3Cpath d='m14 18 4-4'%3E%3C/path%3E%3Cpath d='m10 14 4-4'%3E%3C/path%3E%3Cpath d='m6 10 4-4'%3E%3C/path%3E%3Cpath d='m2 6 4-4'%3E%3C/path%3E%3Cpath d='m8.5 12.5 5 5'%3E%3C/path%3E%3Cpath d='m11.5 9.5 5 5'%3E%3C/path%3E%3C/svg%3E") 4 4, auto;
+}
+
+/* Micro-interactions */
+.btn-premium {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.08);
+}
+
+.btn-premium:active {
+  transform: translateY(0);
+}
